@@ -3,11 +3,8 @@
 echo "Esse script é focado na instalação do Odoo V.10"
 echo "com o foco em desenvolvimento"
 
-sudo bash -c 'echo "en_US ISO-8859-1" >> /etc/locale.gen'
-sudo bash -c 'echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen'
-sudo bash -c 'echo "pt_BR ISO-8859-1" >> /etc/locale.gen'
-sudo bash -c 'echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen'
-sudo locale-gen
+echo "Configurando locales"
+sudo locale-gen en_US en_US.UTF-8 pt_BR pt_BR.UTF-8
 
 echo "Atualizando cache do sistema"
 sudo apt-get update
